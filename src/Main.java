@@ -5,14 +5,14 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		boolean frg = true;
 
-		Member member = new Member("山田太郎");
+		Member member = new Member("葉加瀬太郎");
 		DVD dvd = new DVD("君の名は", 300);
 
 		Regi regi = new Regi();
 
 		Rental rental = new Rental(member, dvd);
 
-		while (frg) { // 開店状態
+		while (frg) { 		// 開店状態
 			System.out.println("---メニュー画面---");
 
 			System.out.println("１：貸出");
@@ -34,6 +34,7 @@ public class Main {
 					System.out.println("会員：" + rental.getMember().getName());
 					System.out.println("DVD：" + rental.getDVD().getTitle());
 					System.out.println("料金：" + rental.charge() + "円");
+					System.out.println("ポイント：" + rental.getMember().getPoint());
 					System.out.println("貸出日：" + rental.getRentalDate());
 					System.out.println("返却予定日：" + rental.getDueDate());
 

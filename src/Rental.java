@@ -15,6 +15,7 @@ public class Rental {
 		
 		
 		//日付処理
+		
 		this.rentalDate = LocalDate.now();				//この貸出記録の貸出日
 		this.dueDate = this.rentalDate.plusDays(7);		//この貸出記録の返却予定日(貸出日からｎ日後)
 		this.returned = false;							//まだ返却されていない
